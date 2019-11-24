@@ -273,6 +273,340 @@ while (i != 'stop'):
         driver.find_element_by_xpath(
             "(.//*[normalize-space(text()) and normalize-space(.)='No'])[2]/following::button[1]").click()
 
+    if (i == 'tu49'):
+        driver.find_element_by_xpath("//li[4]/a/i").click()
+        driver.find_element_by_link_text("Users").click()
+        driver.find_element_by_xpath("//table[@id='tbl-users']/tbody/tr[4]/td[4]/div/button/i").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Disable'])[4]/following::button[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Cathy'])[2]/following::button[1]").click()
+        driver.find_element_by_xpath("/html/body/div[1]/header/a/span[2]").click()
+
+    elif (i == 'tu48'):
+        driver.find_element_by_link_text("Settings").click()
+        driver.find_element_by_link_text("General").click()
+        driver.find_element_by_link_text("Localisation").click()
+        driver.find_element_by_id("select2-percent_position-container").click()
+        driver.find_element_by_id("select2-percent_position-container").click()
+        driver.find_element_by_id("select2-timezone-container").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Allowed File Types'])[1]/following::button[1]").click()
+
+
+    elif (i == 'tu46'):
+        driver.find_element_by_link_text("Tekas").click()
+        driver.find_element_by_link_text("Logout").click()
+
+    elif (i == 'tu45'):
+        driver.find_element_by_xpath("//li[2]/a/i").click()
+        driver.find_element_by_link_text("English (GB)").click()
+
+    elif (i == 'tu44'):
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Toggle navigation'])[1]/following::a[1]").click()
+        driver.find_element_by_link_text("Account").click()
+        driver.find_element_by_id("name").clear()
+        driver.find_element_by_id("name").send_keys("hj")
+        driver.find_element_by_id("number").click()
+        driver.find_element_by_id("number").clear()
+        driver.find_element_by_id("number").send_keys("45")
+        driver.find_element_by_id("opening_balance").click()
+        driver.find_element_by_id("bank_name").click()
+        driver.find_element_by_id("bank_name").clear()
+        driver.find_element_by_id("bank_name").send_keys("canara")
+        driver.find_element_by_id("bank_phone").click()
+        driver.find_element_by_id("bank_phone").clear()
+        driver.find_element_by_id("bank_phone").send_keys("9885423655")
+        driver.find_element_by_id("bank_address").click()
+        driver.find_element_by_id("bank_address").clear()
+        driver.find_element_by_id("bank_address").send_keys("kekdnndjs")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='No'])[2]/following::button[1]").click()
+
+
+    elif (i == 'tu43'):
+        driver.find_element_by_xpath("//i").click()
+        driver.find_element_by_link_text("Vendor").click()
+        driver.find_element_by_id("name").clear()
+        driver.find_element_by_id("name").send_keys("abc")
+        driver.find_element_by_id("email").clear()
+        driver.find_element_by_id("email").send_keys("abc@gmail.com")
+        driver.find_element_by_id("tax_number").click()
+        driver.find_element_by_id("tax_number").clear()
+        driver.find_element_by_id("tax_number").send_keys("251")
+        driver.find_element_by_id("phone").click()
+        driver.find_element_by_id("phone").clear()
+        driver.find_element_by_id("phone").send_keys("9886752314")
+        driver.find_element_by_id("website").click()
+        driver.find_element_by_id("website").clear()
+        driver.find_element_by_id("website").send_keys("abc.com")
+        driver.find_element_by_id("address").click()
+        driver.find_element_by_id("address").clear()
+        driver.find_element_by_id("address").send_keys("abcv")
+        driver.find_element_by_id("reference").click()
+        driver.find_element_by_id("reference").clear()
+        driver.find_element_by_id("reference").send_keys("atoz")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Reference'])[1]/following::button[1]").click()
+
+    elif (i == 'tu42'):
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Toggle navigation'])[1]/following::a[1]").click()
+        driver.find_element_by_link_text("Payment").click()
+        driver.find_element_by_id("description").click()
+        driver.find_element_by_id("description").clear()
+        driver.find_element_by_id("description").send_keys("paid")
+        driver.find_element_by_id("select2-category_id-container").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Select File'])[1]/following::button[1]").click()
+
+    elif (i == 'tu41'):
+        driver.get("https://app.akaunting.com/")
+        driver.find_element_by_xpath("//i").click()
+        driver.find_element_by_link_text("Bill").click()
+        driver.find_element_by_id("select2-vendor_id-container").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='New Bill'])[1]/following::div[2]").click()
+        driver.find_element_by_id("bill_number").click()
+        driver.find_element_by_id("bill_number").clear()
+        driver.find_element_by_id("bill_number").send_keys("250")
+        driver.find_element_by_id("order_number").click()
+        driver.find_element_by_id("order_number").clear()
+        driver.find_element_by_id("order_number").send_keys("45")
+        driver.find_element_by_id("item-name-0").click()
+        driver.find_element_by_id("item-name-0").clear()
+        driver.find_element_by_id("item-name-0").send_keys("card")
+        driver.find_element_by_id("item-price-0").click()
+        driver.find_element_by_xpath("//input[@type='search']").click()
+        driver.find_element_by_xpath("//input[@type='search']").clear()
+        driver.find_element_by_xpath("//input[@type='search']").send_keys("40")
+        driver.find_element_by_xpath(
+            u"(.//*[normalize-space(text()) and normalize-space(.)='₹2,000.00'])[1]/following::td[3]").click()
+        driver.find_element_by_id("select2-category_id-container").click()
+        driver.find_element_by_xpath("//button/span").click()
+
+
+    elif (i == 'tu40'):
+        driver.find_element_by_xpath("//i").click()
+        driver.find_element_by_link_text("Invoice").click()
+        driver.find_element_by_id("select2-customer_id-container").click()
+        driver.find_element_by_id("due_at").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Su'])[1]/following::td[31]").click()
+        driver.find_element_by_id("order_number").click()
+        driver.find_element_by_id("order_number").clear()
+        driver.find_element_by_id("order_number").send_keys("45")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Total'])[1]/following::td[2]").click()
+        driver.find_element_by_id("item-name-0").click()
+        driver.find_element_by_id("item-name-0").clear()
+        driver.find_element_by_id("item-name-0").send_keys("card")
+        driver.find_element_by_id("item-price-0").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='New Invoice'])[1]/following::div[2]").click()
+        driver.find_element_by_id("select2-category_id-container").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Select File'])[1]/following::button[1]").click()
+
+    elif (i == 'tu39'):
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Toggle navigation'])[1]/following::a[1]").click()
+        driver.find_element_by_link_text("Customer").click()
+        driver.find_element_by_id("name").clear()
+        driver.find_element_by_id("name").send_keys("Anil")
+        driver.find_element_by_id("email").click()
+        driver.find_element_by_id("email").clear()
+        driver.find_element_by_id("email").send_keys("Anil@gmail.com")
+        driver.find_element_by_id("tax_number").click()
+        driver.find_element_by_id("tax_number").clear()
+        driver.find_element_by_id("tax_number").send_keys("244")
+        driver.find_element_by_id("phone").click()
+        driver.find_element_by_id("phone").clear()
+        driver.find_element_by_id("phone").send_keys("9563214589")
+        driver.find_element_by_id("website").click()
+        driver.find_element_by_id("website").clear()
+        driver.find_element_by_id("website").send_keys("anil.com")
+        driver.find_element_by_id("address").click()
+        driver.find_element_by_xpath("//div[@id='customer-create-user']/div/ins").click()
+        driver.find_element_by_xpath("//div[@id='customer-create-user']/div/ins").click()
+        driver.find_element_by_id("address").clear()
+        driver.find_element_by_id("address").send_keys("jjwkjkdk")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Allow Login?'])[1]/following::button[1]").click()
+
+    elif (i == 'tu38'):
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Toggle navigation'])[1]/following::a[1]").click()
+        driver.find_element_by_link_text("Revenue").click()
+        driver.find_element_by_id("select2-customer_id-container").click()
+        driver.find_element_by_id("description").click()
+        driver.find_element_by_id("description").clear()
+        driver.find_element_by_id("description").send_keys("Paid")
+        driver.find_element_by_id("select2-category_id-container").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Select File'])[1]/following::button[1]").click()
+
+    elif (i == 'tu37'):
+        driver.find_element_by_xpath("//span[2]/i").click()
+        driver.find_element_by_link_text("Invoices").click()
+        driver.find_element_by_xpath("//table[@id='tbl-invoices']/tbody/tr/td[7]/div/button/i").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Duplicate'])[1]/following::button[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Invoices'])[2]/following::button[1]").click()
+
+    elif (i == 'tu36'):
+        driver.find_element_by_link_text("Banking").click()
+        driver.find_element_by_link_text("Reconciliations").click()
+        driver.find_element_by_link_text("Add New").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='New Reconciliation'])[1]/following::div[4]").click()
+        driver.find_element_by_id("started_at").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Su'])[1]/following::td[26]").click()
+        driver.find_element_by_id("ended_at").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Su'])[1]/following::td[31]").click()
+        driver.find_element_by_id("closing_balance").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Cash'])[2]/following::button[1]").click()
+        driver.find_element_by_xpath(
+            u"(.//*[normalize-space(text()) and normalize-space(.)='₹0.00'])[2]/following::button[1]").click()
+
+    elif (i == 'tu35'):
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Last login 36 minutes ago'])[1]/preceding::span[1]").click()
+        driver.find_element_by_link_text("Users").click()
+        driver.find_element_by_link_text("Add New").click()
+        driver.find_element_by_id("name").click()
+        driver.find_element_by_id("name").clear()
+        driver.find_element_by_id("name").send_keys("Abc")
+        driver.find_element_by_id("email").clear()
+        driver.find_element_by_id("email").send_keys("Abc123@gmail.com")
+        driver.find_element_by_id("password").click()
+        driver.find_element_by_id("password").clear()
+        driver.find_element_by_id("password").send_keys("abc123")
+        driver.find_element_by_xpath("//ins").click()
+        driver.find_element_by_xpath("//div[2]/div/ins").click()
+        driver.find_element_by_id("password_confirmation").clear()
+        driver.find_element_by_id("password_confirmation").send_keys("abc123")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='New User'])[1]/following::form[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Enabled'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='No'])[1]/following::button[1]").click()
+
+    elif (i == 'tu34'):
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Last login 38 minutes ago'])[1]/preceding::span[1]").click()
+        driver.find_element_by_link_text("Profile").click()
+        driver.find_element_by_id("picture").click()
+        driver.find_element_by_id("picture").clear()
+        driver.find_element_by_id("picture").send_keys("C:\\fakepath\\Sketch (1).png")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Select File'])[1]/following::button[1]").click()
+
+    elif (i == 'tu33'):
+        driver.find_element_by_link_text("Settings").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Categories'])[1]/following::span[1]").click()
+        driver.find_element_by_link_text("Add New").click()
+        driver.find_element_by_id("name").clear()
+        driver.find_element_by_id("name").send_keys("pao")
+        driver.find_element_by_id("select2-code-container").click()
+        driver.find_element_by_id("rate").click()
+        driver.find_element_by_id("rate").clear()
+        driver.find_element_by_id("rate").send_keys("5")
+        driver.find_element_by_id("symbol").click()
+        driver.find_element_by_id("symbol").clear()
+        driver.find_element_by_id("symbol").send_keys("^")
+        driver.find_element_by_id("symbol_first").click()
+        Select(driver.find_element_by_id("symbol_first")).select_by_visible_text("Before Amount")
+        driver.find_element_by_id("symbol_first").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='No'])[2]/following::button[1]").click()
+
+    elif (i == 'tu32'):
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Profit & Loss'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Settings'])[1]/following::span[2]").click()
+        driver.find_element_by_link_text("Defaults").click()
+        driver.find_element_by_id("select2-default_currency-container").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Allowed File Types'])[1]/following::button[1]").click()
+
+        # elif(i=='tu31'):
+
+    elif (i == 'tu30'):
+        driver.find_element_by_link_text("Settings").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Settings'])[1]/following::span[2]").click()
+        driver.find_element_by_link_text("System").click()
+        driver.find_element_by_id("session_lifetime").click()
+        driver.find_element_by_id("session_lifetime").clear()
+        driver.find_element_by_id("session_lifetime").send_keys("40")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Allowed File Types'])[1]/following::button[1]").click()
+
+    elif (i == 'tu29'):
+        driver.find_element_by_link_text("Banking").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Transfers'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Search:'])[1]/following::button[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Custom Range'])[1]/following::button[1]").click()
+        driver.find_element_by_xpath("//input[@type='search']").click()
+        driver.find_element_by_xpath("(//input[@type='search'])[2]").click()
+        driver.find_element_by_xpath(
+            u"(.//*[normalize-space(text()) and normalize-space(.)='×'])[2]/following::button[1]").click()
+
+    elif (i == 'tu28'):
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Settings'])[1]/following::span[2]").click()
+        driver.find_element_by_id("company_tax_number").click()
+        driver.find_element_by_id("company_tax_number").clear()
+        driver.find_element_by_id("company_tax_number").send_keys("25")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Allowed File Types'])[1]/following::button[1]").click()
+
+    elif (i == 'tu27'):
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Vendors'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Accounts'])[1]/following::span[1]").click()
+        driver.find_element_by_link_text("Add New").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='From Account'])[1]/following::span[5]").click()
+        driver.find_element_by_id("select2-to_account_id-container").click()
+        driver.find_element_by_id("amount").click()
+        driver.find_element_by_id("description").click()
+        driver.find_element_by_id("description").clear()
+        driver.find_element_by_id("description").send_keys("payment")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Reference'])[1]/following::button[1]").click()
+
+    elif (i == 'tu26'):
+        driver.find_element_by_link_text("Reports").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Tax Summary'])[1]/following::span[1]").click()
+        driver.find_element_by_name("status").click()
+        Select(driver.find_element_by_name("status")).select_by_visible_text("Paid")
+        driver.find_element_by_name("status").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Jan-Mar'])[1]/preceding::button[1]").click()
+
+    elif (i == 'tu25'):
+        driver.find_element_by_link_text("Reports").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Expense Summary'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath("//input[@type='search']").click()
+        driver.find_element_by_xpath(
+            u"(.//*[normalize-space(text()) and normalize-space(.)='×'])[1]/following::button[1]").click()
+
     i = input("Enter your option (Test Case ID or 'stop') : ")
 
 print("Done now")
