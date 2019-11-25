@@ -38,6 +38,7 @@ while (i != 'stop'):
 
     driver.find_element_by_xpath('/html/body/div/aside/div/section/ul[2]/li[1]/a').click()
 
+    # --- Component Testing --- #
     if (i == 'tu05'): # add new income invoice
         driver.find_element_by_xpath('/html/body/div[1]/aside/div/section/ul[2]/li[3]/a').click()
         driver.find_element_by_xpath('/html/body/div[1]/aside/div/section/ul[2]/li[3]/ul/li[1]/a/span').click()
@@ -133,12 +134,17 @@ while (i != 'stop'):
             "(.//*[normalize-space(text()) and normalize-space(.)='Expenses'])[1]/following::span[2]").click()
         driver.find_element_by_link_text("Add New").click()
         driver.find_element_by_id("select2-vendor_id-container").click()
+        driver.find_element_by_id("select2-vendor_id-container").send_keys('c')
+        driver.find_element_by_id("select2-vendor_id-container").send_keys(Keys.RETURN)
         driver.find_element_by_id("bill_number").click()
         driver.find_element_by_id("bill_number").clear()
         driver.find_element_by_id("bill_number").send_keys("12546")
         driver.find_element_by_id("item-name-0").click()
         driver.find_element_by_id("item-name-0").clear()
         driver.find_element_by_id("item-name-0").send_keys("random item")
+        driver.find_element_by_id("item-price-0").click()
+        driver.find_element_by_id("item-price-0").clear()
+        driver.find_element_by_id("item-price-0").send_keys('550')
         driver.find_element_by_id("item-price-0").click()
         driver.find_element_by_id("select2-category_id-container").click()
         driver.find_element_by_xpath(
@@ -155,8 +161,8 @@ while (i != 'stop'):
         driver.find_element_by_xpath(
             "(.//*[normalize-space(text()) and normalize-space(.)='Reference'])[1]/following::button[1]").click()
 
-    elif (i == '12'): # search income customers based on keyword
-        driver.find_element_by_link_text("Incomes").click()
+    elif (i == 'tu12'): # search income customers based on keyword
+        driver.find_element_by_xpath('/html/body/div[1]/aside/div/section/ul[2]/li[3]/a').click()
         driver.find_element_by_xpath(
             "(.//*[normalize-space(text()) and normalize-space(.)='Revenues'])[1]/following::span[1]").click()
         driver.find_element_by_name("search").click()
@@ -181,6 +187,18 @@ while (i != 'stop'):
         driver.find_element_by_xpath(
             "(.//*[normalize-space(text()) and normalize-space(.)='Revenues'])[1]/following::span[1]").click()
         driver.find_element_by_link_text("Name").click()
+
+    elif (i == 'tu15'):
+        driver.find_element_by_xpath('/html/body/div[1]/aside/div/section/ul[2]/li[2]/a').click()
+        driver.find_element_by_xpath('/html/body/div/div/section[1]/h1/span[2]/a').click()
+        driver.find_element_by_xpath('/html/body/div/div/section[2]/div/form/div[1]/div[2]/div/div/button').click()
+        driver.find_element_by_xpath('/html/body/div/div/section[2]/div/form/div[2]/div/div/button').click()
+
+    elif (i == 'tu16'):
+        driver.find_element_by_xpath('/html/body/div[1]/aside/div/section/ul[2]/li[2]/a').click()
+        driver.find_element_by_xpath('/html/body/div/div/section[1]/h1/span[2]/a').click()
+        driver.find_element_by_xpath('/html/body/div/div/section[2]/div/form/div[1]/div[2]/div/div/button').click()
+        driver.find_element_by_xpath('/html/body/div/div/section[2]/div/form/div[2]/div/div/button').click()
 
     elif (i == 'tu17'): # export items
         driver.find_element_by_link_text("Items").click()
@@ -606,6 +624,144 @@ while (i != 'stop'):
         driver.find_element_by_xpath("//input[@type='search']").click()
         driver.find_element_by_xpath(
             u"(.//*[normalize-space(text()) and normalize-space(.)='×'])[1]/following::button[1]").click()
+
+    # --- Usability Testing --- #
+    elif (i == 'tv01'):
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Toggle navigation'])[1]/preceding::b[1]")
+        driver.find_element_by_id("BiyWqLogjO")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Total Incomes'])[1]/following::span[1]")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Total Expenses'])[1]/following::span[1]")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Total Profit'])[1]/following::span[1]")
+        driver.find_element_by_id("bNTmKUhfIV")
+        driver.find_element_by_id("BJekypGYis")
+        driver.find_element_by_xpath("//img[@alt='MyApp']")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Logout'])[1]/following::p[1]")
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Last login 15 minutes ago'])[1]/preceding::span[1]")
+
+    elif (i == 'tv02'):
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Manage Companies'])[1]/following::span[2]").click()
+        driver.find_element_by_link_text("Items").click()
+        driver.find_element_by_link_text("Incomes").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Incomes'])[1]/following::span[2]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Invoices'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Revenues'])[1]/following::span[1]").click()
+        driver.find_element_by_link_text("Expenses").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Expenses'])[1]/following::span[2]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Bills'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Payments'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Vendors'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Banking'])[2]/following::span[2]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Accounts'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Transfers'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Transactions'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Reconciliations'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Reports'])[1]/following::span[2]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Income Summary'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Expense Summary'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Income vs Expense'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Tax Summary'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Profit & Loss'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Settings'])[1]/following::span[2]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='General'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Categories'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Currencies'])[1]/following::span[1]").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Tax Rates'])[1]/following::span[1]").click()
+
+    elif (i == 'tv03'):
+        driver.find_element_by_link_text("Tekas").click()
+        driver.find_element_by_link_text("Profile").click()
+
+    elif (i == 'tv05'):
+        driver.find_element_by_xpath('/html/body/div[1]/header/nav/div/ul/li[4]/a').click()
+        driver.find_element_by_xpath('/html/body/div[1]/header/nav/div/ul/li[4]/ul/li[3]/div[2]/a').click()
+        driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[1]/input').click()
+        driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[1]/input').clear()
+        driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[1]/input').send_keys('tejasnitk@gmail.com')
+        driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/input').click()
+        driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/input').clear()
+        driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/input').send_keys('tejaskumar')
+        driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[3]/div[1]/div/label/div/ins').click()
+        driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[3]/div[2]/button').click()
+
+        driver.close()
+        driver.switch_to.window(driver.window_handles[0])
+        driver.find_element_by_xpath('//*[@id="tab-companies"]/table/tbody/tr[1]/td[3]/button').click()
+        new_window = driver.window_handles[1]
+        driver.switch_to.window(new_window)
+
+    elif(i == 'tv04'):
+        driver.find_element_by_xpath("//div/ul/li/a/i").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Apps'])[1]/following::section[1]").click()
+
+    elif(i == 'tv15'):
+        driver.find_element_by_xpath("//li[7]/a/span[2]/i").click()
+        driver.find_element_by_xpath("//li[7]/a/span[2]/i").click()
+
+    elif(i == 'tv14'):
+        driver.find_element_by_xpath("//li[6]/a/span[2]/i").click()
+        driver.find_element_by_xpath("//li[6]/a/span[2]/i").click()
+
+    elif(i == 'tv13'):
+        driver.find_element_by_xpath("//li[5]/a/span[2]/i").click()
+        driver.find_element_by_xpath("//li[5]/a/span[2]/i").click()
+
+    elif(i == 'tv12'):
+        driver.find_element_by_xpath("//li[4]/a/span[2]/i").click()
+        driver.find_element_by_xpath("//li[4]/a/span[2]/i").click()
+
+    elif(i == 'tv11'):
+        driver.find_element_by_xpath("//span[2]/i").click()
+        driver.find_element_by_xpath("//span[2]/i").click()
+
+    elif(i == 'tv10'):
+        driver.find_element_by_xpath("//div[4]/div/div/div/div/button/i").click()
+
+    elif(i == 'tv09'):
+        driver.find_element_by_xpath("//div[2]/div/div/div/button/i").click()
+
+    elif(i == 'tv08'):
+        driver.find_element_by_xpath("//div/button/i").click()
+
+    elif(i == 'tv07'):
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Toggle navigation'])[1]/preceding::b[1]").click()
+
+    elif( i == 'tv06'):
+        driver.find_element_by_xpath("//span[2]/i").click()
+        driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Incomes'])[1]/following::span[2]").click()
+
 
     i = input("Enter your option (Test Case ID or 'stop') : ")
 

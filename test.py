@@ -28,11 +28,29 @@ driver.find_element_by_xpath('//*[@id="tab-companies"]/table/tbody/tr[1]/td[3]/b
 new_window = driver.window_handles[1]
 driver.switch_to.window(new_window)
 
-driver.find_element_by_link_text("Incomes").click()
-driver.find_element_by_xpath(
-    "(.//*[normalize-space(text()) and normalize-space(.)='Revenues'])[1]/following::span[1]").click()
-driver.find_element_by_name("search").click()
-driver.find_element_by_name("search").clear()
-driver.find_element_by_name("search").send_keys("erin")
-driver.find_element_by_xpath(
-    "(.//*[normalize-space(text()) and normalize-space(.)='Search:'])[1]/following::button[1]").click()
+# --- Enter your test code here ---
+i = input("Enter your option ('go' or 'stop') : ")
+while i != 'stop':
+    driver.find_element_by_xpath('/html/body/div/aside/div/section/ul[2]/li[1]/a').click()
+
+    driver.find_element_by_xpath('/html/body/div[1]/header/nav/div/ul/li[4]/a').click()
+    driver.find_element_by_xpath('/html/body/div[1]/header/nav/div/ul/li[4]/ul/li[3]/div[2]/a').click()
+    driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[1]/input').click()
+    driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[1]/input').clear()
+    driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[1]/input').send_keys('tejasnitk@gmail.com')
+    driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/input').click()
+    driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/input').clear()
+    driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/input').send_keys('tejaskumar')
+    driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[3]/div[1]/div/label/div/ins').click()
+    driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[3]/div[2]/button').click()
+
+    driver.close()
+    driver.switch_to.window(driver.window_handles[0])
+    driver.find_element_by_xpath('//*[@id="tab-companies"]/table/tbody/tr[1]/td[3]/button').click()
+    new_window = driver.window_handles[1]
+    driver.switch_to.window(new_window)
+
+    i = input("Enter your option ('go' or 'stop') : ")
+
+print("done now boi")
+driver.close()
